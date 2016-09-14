@@ -14,6 +14,9 @@ class CreateToursTable extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('tourName');
+            $table->string('tourDescript');
+            $table->string('tourTime');
             $table->timestamps();
         });
     }

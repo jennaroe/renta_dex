@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class TaskRequest extends Request
+class ClientsRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,10 @@ class TaskRequest extends Request
     public function rules()
     {
         return [
-             'taskTitle' => 'required',
-             'taskDescript' => 'required'
-
+            'clientName' => 'required',
+            'clientNum' => 'required',
+            'email' => 'required',
+            'moveInDate' => 'required'
         ];
     }
 }

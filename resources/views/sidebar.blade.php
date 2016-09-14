@@ -31,20 +31,13 @@
         <ul class="sidebar-menu">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="/client"><span>Clients</span></a></li>
-            <li><a href="/moveins"><span>Commission Tracker</span></a></li>
-            <li><a href="/task"><span>Tours</span></a></li>
+            <li class="active"><a href="/clients"><span>Clients</span></a></li>
+            <li><a href="/commissions"><span>Commission Tracker</span></a></li>
+            <li><a href="/tours"><span>Tours</span></a></li>
             <li><a href="/invoices"><span>Invoices</span></a></li>
             <li><a href="/buildings"><span>Buildings</span></a></li>
             <li><a href="/acctInfo"><span>Profile</span></a></li>
 
-
-            <!-- <li class="treeview">
-                <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
-                </ul> -->
             </li>
         </ul><!-- /.sidebar-menu -->
     </section>

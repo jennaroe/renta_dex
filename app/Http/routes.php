@@ -11,41 +11,34 @@
 |
 */
 
-use App\Moveins;
+use App\Commission;
 
 use App\Task;
 
 use App\Tours;
 
+use App\Clients;
+
 Route::get('/', function () {
     return view('client');
 });
 
+Route::resource('clients', 'ClientsController');
 
-// // Route::get('/insert', function () {
-// // 	Moveins::create(['clientName'=> 'Testy Testerson', 'building'=>'The Paramount']);
-// // 	return 'move in data created';
-// // });
-
-// Route::get('/moveins', 'MoveinsController@view');
 Route::resource('task', 'TaskController');
 
-Route::resource('moveins','MoveinsController@index');
+Route::resource('tours', 'ToursController');
+
+Route::resource('commissions','CommissionController');
 
 
 
 
 
-Route::get('/client', 'ClientController@index');
+// Route::get('/client', 'ClientController@index');
 
-Route::post('/client', 'FormController@clients');
+// Route::post('/client', 'FormController@clients');
 
-
-// Route::post('/task', 'FormController@tasks');
-
-// Route::get('/moveins', 'MoveinsController@index');
-
-// Route::post('/moveins', 'FormController@moveins');
 
 Route::get('/invoices', 'InvoicesController@index');
 

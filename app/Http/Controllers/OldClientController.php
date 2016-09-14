@@ -21,7 +21,7 @@ use App\Http\Requests;
 //     exit();
 // }
 
-class ClientController extends Controller
+class OldClientController extends Controller
 {
 	 public function index() {
         $page_title = 'Current Clients';
