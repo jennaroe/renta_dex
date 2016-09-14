@@ -13,11 +13,14 @@
 
 use App\Moveins;
 
-use App\Tasks;
+use App\Task;
+
+use App\Tours;
 
 Route::get('/', function () {
     return view('client');
 });
+
 
 // // Route::get('/insert', function () {
 // // 	Moveins::create(['clientName'=> 'Testy Testerson', 'building'=>'The Paramount']);
@@ -25,10 +28,12 @@ Route::get('/', function () {
 // // });
 
 // Route::get('/moveins', 'MoveinsController@view');
+Route::resource('task', 'TaskController');
 
 Route::resource('moveins','MoveinsController@index');
 
-Route::resource('tasks', 'TaskController@index');
+
+
 
 
 Route::get('/client', 'ClientController@index');

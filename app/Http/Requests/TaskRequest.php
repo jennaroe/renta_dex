@@ -24,9 +24,8 @@ class TaskRequest extends Request
     public function rules()
     {
         return [
-            'taskName' => 'required',
-            'taskDescript' => 'required',
-            'taskTime' => 'required'
+             'taskTitle' => 'required',
+            'taskDescript' => 'required'
 
         ];
     }

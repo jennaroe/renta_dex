@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin_template')
 
 @section('content')
 <div class="container">
@@ -11,20 +11,20 @@
                     Our Form
                     {!! Form::open(array('route'=>'task.store')) !!}
                         <div class="form-group">
-                            {!! Form:label('taskTitle', 'Enter Title') !!}
-                            {!! Form:text('taskTitle', null, ['class'=> 'form-control']) !!}
+                            {!! Form::label('taskTitle', 'Enter Title') !!}
+                            {!! Form::text('taskTitle', null, ['class'=> 'form-control']) !!}
                         </div>
 
                         <div class="form-group">
-                            {!! Form:label('taskDescript', 'Enter Description') !!}
-                            {!! Form:text('taskDescript', null, null, ['class'=> 'form-control']) !!}
+                            {!! Form::label('taskDescript', 'Enter Description') !!}
+                            {!! Form::text('taskDescript', null, ['class'=> 'form-control']) !!}
 
                         </div>
 
-                        <div class="form-group">
-                            {!! Form:label('taskTime', 'Enter Time') !!}
-                            {!! Form:label('taskTime', null, null, ['class'=> 'form-control']) !!}
-                        </div>
+                        <!-- <div class="form-group">
+                            {!! Form::label('taskTime', 'Enter Time') !!}
+                            {!! Form::label('taskTime', null, ['class'=> 'form-control']) !!}
+                        </div> -->
                         <div class="form-group">
 
                             {!! Form::button('Create',['type' =>'submit', 'class'=>'btn btn-primary']) !!}
@@ -34,7 +34,7 @@
 
                 </div>
             </div>
-                @if(errors->has())
+                @if($errors->has())
                   <ul class="alert alert-danger">
                     @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>

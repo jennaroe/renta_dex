@@ -32,10 +32,10 @@
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="/client"><span>Clients</span></a></li>
-            <li><a href="/moveins"><span>Move-Ins</span></a></li>
+            <li><a href="/moveins"><span>Commission Tracker</span></a></li>
+            <li><a href="/task"><span>Tours</span></a></li>
             <li><a href="/invoices"><span>Invoices</span></a></li>
             <li><a href="/buildings"><span>Buildings</span></a></li>
-            <li><a href="/tasks"><span>Tours</span></a></li>
             <li><a href="/acctInfo"><span>Profile</span></a></li>
 
 
