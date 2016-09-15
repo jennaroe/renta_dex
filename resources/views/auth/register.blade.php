@@ -38,6 +38,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('brokerName') ? ' has-error' : '' }}">
+                            <label for="brokerName" class="col-md-4 control-label">Broker Name</label>
+
+                            <div class="col-md-6">
+                                <input id="brokerName" type="brokerName" class="form-control" name="brokerName" value="{{ old('brokerName') }}">
+
+                                @if ($errors->has('brokerName'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('brokerName') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

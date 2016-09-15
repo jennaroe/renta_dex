@@ -2,7 +2,7 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
+    <a href="{{ url('/start') }}" class="logo">
       <span class="logo-mini"><b>RD</b></span>
 
       <span class="logo-lg">

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
- 
+ <!--
+    This is a starter template page. Use this page to start your new project from
+    scratch. This page gets rid of all links and provides the needed markup only.
+    -->
     <html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>RentaDEX | Dashboard</title>
+        <title>RentaDEX | Welcome</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- Bootstrap 3.3.6 -->
         <link href="{{ asset("/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
@@ -24,10 +27,8 @@
 <div class="wrapper">
 
     <!-- Header -->
-    @include('header')
+    @include('start_header')
 
-    <!-- Sidebar -->
-    @include('sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -64,6 +65,7 @@
     <script src="{{ asset ("/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset ("/bower_components/AdminLTE/dist/js/app.min.js") }}" type="text/javascript"></script>
+
 
 </body>
 </html>

@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ToursRequest;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Tours;
 
-class ToursController extends Controller
+use App\Http\Requests;
+
+class StartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,7 @@ class ToursController extends Controller
      */
     public function index()
     {
-        $tours = Tours::all();
-        $page_title = 'Tours';
-        return view('tours.index', compact('tours', 'page_title'));
+        return view('start');
     }
 
     /**
@@ -28,7 +25,7 @@ class ToursController extends Controller
      */
     public function create()
     {
-        return view('tours.create');
+        //
     }
 
     /**
@@ -37,10 +34,9 @@ class ToursController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ToursRequest $request)
+    public function store(Request $request)
     {
-        Tours::create($request->all());
-        return redirect()->route('tours.index')->with('message','item has been added successfully');
+        //
     }
 
     /**
@@ -60,9 +56,9 @@ class ToursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tours $tours)
+    public function edit($id)
     {
-       return view('tours.edit',compact('tours'));
+        //
     }
 
     /**
@@ -72,10 +68,9 @@ class ToursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ToursRequest $request, Tours $tours)
+    public function update(Request $request, $id)
     {
-        $tours->update($request->all());
-        return redirect()->route('tours.index')->with('message','Item has been updated successfully');    
+        //
     }
 
     /**
@@ -84,9 +79,8 @@ class ToursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tours $tours)
+    public function destroy($id)
     {
-        $tours->delete();
-        return redirect()->route('tours.index')->with('message','Item has been deleted successfully');
+        //
     }
 }

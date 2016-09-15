@@ -1,4 +1,4 @@
-@extends('admin_template')
+@extends('start_template')
 
 @section('content')
 <div class='row'>

@@ -20,7 +20,7 @@ use App\Tours;
 use App\Clients;
 
 Route::get('/', function () {
-    return view('client');
+    return view('home');
 });
 
 Route::resource('clients', 'ClientsController');
@@ -31,14 +31,9 @@ Route::resource('tours', 'ToursController');
 
 Route::resource('commissions','CommissionController');
 
+// Route::resource('start', 'StartController');
 
-
-
-
-// Route::get('/client', 'ClientController@index');
-
-// Route::post('/client', 'FormController@clients');
-
+Route::get('/start', 'StartController@index');
 
 Route::get('/invoices', 'InvoicesController@index');
 
