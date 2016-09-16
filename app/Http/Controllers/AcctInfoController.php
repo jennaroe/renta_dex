@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\UsersRequest;
+use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 use App\User;
 
@@ -18,7 +18,7 @@ class AcctInfoController extends Controller
 
     public function edit(User $users)
     {
-       return view('users.edit',compact('users'));
+       return view('acctInfo',compact('users'));
     }
 
     /**
@@ -28,21 +28,28 @@ class AcctInfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ToursRequest $request, Tours $tours)
+    public function update(UserRequest $request, User $users)
     {
-        $tours->update($request->all());
-        return redirect()->route('tours.index')->with('message','Item has been updated successfully');    
+        $users = Auth::user();
+
+        $users->update($request->all());
+        return redirect()->route('acctInfo')->with('message','Item has been updated successfully');    
     }
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tours $tours)
+    public function destroy(User $users)
     {
-        $tours->delete();
-        return redirect()->route('tours.index')->with('message','Item has been deleted successfully');
+        $users->delete();
+        return redirect()->route('acctInfo')->with('message','Item has been deleted successfully');
     }
 }

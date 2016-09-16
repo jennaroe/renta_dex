@@ -17,7 +17,7 @@
                         <tr>
                             <th>Tour Name</th>
                             <th>Description</th>
-                            <th>Time</th>
+                            <th>Time/Date</th>
                         </tr>
                         @foreach($tours as $tour)
                             <tr>

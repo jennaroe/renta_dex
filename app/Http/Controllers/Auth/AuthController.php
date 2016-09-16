@@ -70,8 +70,10 @@ class AuthController extends Controller
         ]);
     }
 
-    // public function logout()
-    // {
-    //     return view('start');
-    // }
+    public function logout()
+    {
+        //die('test');
+          \Auth::guard($this->getGuard())->logout();
+        return view('start');
+    }
 }

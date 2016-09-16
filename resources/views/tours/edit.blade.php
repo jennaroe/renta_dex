@@ -8,7 +8,7 @@
                 <div class="panel-heading">Update Tours</div>
 
                 <div class="panel-body">
-                    Our Form
+                
                     {!! Form::model($tours, array('route'=>['tours.update', $tours->id], 'method'=>'PUT')) !!}
                         <div class="form-group">
                             {!! Form::label('tourName', 'Tour Name') !!}

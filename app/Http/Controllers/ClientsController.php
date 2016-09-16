@@ -16,7 +16,7 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $page_title = 'Current Clients';
+        $page_title = 'Client Tracker';
         $clients = clients::all();
         return view('clients.index', compact('clients', 'page_title'));
     }

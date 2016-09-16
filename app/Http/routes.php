@@ -19,6 +19,8 @@ use App\Tours;
 
 use App\Clients;
 
+use App\User;
+
 Route::get('/', function () {
     return view('home');
 });
@@ -29,7 +31,9 @@ Route::resource('task', 'TaskController');
 
 Route::resource('tours', 'ToursController');
 
-Route::resource('commissions','CommissionController');
+Route::resource('commissions', 'CommissionController');
+
+// Route::resource('acctInfo', 'AcctInfoController');
 
 // Route::resource('start', 'StartController');
 
@@ -43,7 +47,7 @@ Route::get('/buildings', 'BuildingsController@index');
 
 Route::get('/acctInfo', 'AcctInfoController@index');
 
-Route::post('/acctInfo', 'FormController@acctInfo');
+Route::post('/acctInfo', 'AcctInfoController@update');
 
 Route::auth();
 

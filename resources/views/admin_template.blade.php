@@ -1,5 +1,4 @@
 <!DOCTYPE html>
- 
     <html>
     <head>
         <meta charset="UTF-8">
@@ -13,12 +12,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
         <!-- Theme style -->
         <link href="{{ asset("/bower_components/AdminLTE/dist/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
         
         <link href="{{ asset("/bower_components/AdminLTE/dist/css/skins/skin-purple.min.css")}}" rel="stylesheet" type="text/css" />
 
-        
+        <!-- jQuery 2.2.3 -->
+        <script src="{{ asset ("/bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js") }}"></script>
+
+        <script src="{{ asset ("https://code.jquery.com/ui/1.11.4/jquery-ui.min.js") }}"></script>
+
+
 </head>
 <body class="skin-purple">
 <div class="wrapper">
@@ -37,11 +42,7 @@
                 {{ $page_title or "Page Title" }}
                 <small>{{ $page_description or null }}</small>
             </h1>
-            <!-- You can dynamically generate breadcrumbs here -->
-            <!-- <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
-            </ol> -->
+          
         </section>
 
         <!-- Main content -->
@@ -58,12 +59,21 @@
 
 <!-- REQUIRED JS SCRIPTS -->
 
-<!-- jQuery 2.2.3 -->
-    <script src="{{ asset ("/bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js") }}"></script>
+    <!-- Slimscroll -->
+    <script src="{{ asset("/bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js") }}"></script>
     <!-- Bootstrap 3.3.6 -->
     <script src="{{ asset ("/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset ("/bower_components/AdminLTE/dist/js/app.min.js") }}" type="text/javascript"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset("/bower_components/AdminLTE/dist/js/demo.js") }}"></script>
+    <!-- FastClick -->
+    <script src="{{ asset("/bower_components/AdminLTE/plugins/fastclick/fastclick.js") }}"></script>
+    
+    <!-- fullCalendar 2.2.5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+    <script src="{{ asset("/bower_components/AdminLTE/plugins/fullcalendar/fullcalendar.min.js") }}"></script>
 
 </body>
 </html>

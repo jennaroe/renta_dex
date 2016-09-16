@@ -1,55 +1,95 @@
 @extends('admin_template')
 
-  @section('content')
+@section('content')
+<div class="container">
+    <div class="row">
 
-    <div class='row'>
-     <div class='col-md-6'>
+    <!-- Main content -->
+    <section class="content">
 
+      <!-- Default box -->
+      <div class="box">
+        <div class="box-header with-border">
 
-
-      <!-- general form elements disabled -->
-        <div class="box box-warning">
-          <div class="box-header with-border">
-            <h3 class="box-title">Update your profile	</h3>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <form role="form">
-              <!-- text input -->
-              <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" placeholder="Enter ...">
-              </div>
-               <div class="form-group">
-                <label>Email</label>
-                <input type="text" class="form-control" placeholder="Enter...">
-              </div>
-              <div class="form-group">
-                <label>Password</label>
-                <input type="text" class="form-control" placeholder="Enter ...">
-              </div>
-              <div class="form-group">
-                <label>Broker Name</label>
-                <input type="text" class="form-control" placeholder="Enter ...">
-              </div>
-              <div class="form-group">
-                <label>Broker Address</label>
-                <input type="text" class="form-control" placeholder="Enter ...">
-              </div>
-
-            </form>
-            <button type="button" class="btn bg-purple margin">Submit</button>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
+        <div class="container">
+  <h1 class="page-header">Edit Profile</h1>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <img src="https://cumuloquoise.files.wordpress.com/2014/06/peter-parker2.gif" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block well well-sm">
       </div>
-      <!--/.col (right) -->
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <div class="alert alert-info alert-dismissable">
+        <a class="panel-close close" data-dismiss="alert">×</a> 
+        <i class="fa fa-coffee"></i>
+        This is an <strong>.alert</strong>. Use this to show important messages to the user.
+      </div>
+      <h3>Personal info</h3>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="{{ Auth::user()->name }}" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="{{ Auth::user()->email }}" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Broker:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="{{ Auth::user()->brokerName }}" type="text">
+          </div>
+        </div>
+         <div class="form-group">
+          <label class="col-md-3 control-label">Broker Address:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="{{ Auth::user()->brokerAddress }}" type="text">
+          </div>
+        </div>        
+        <div class="form-group">
+          <label class="col-md-3 control-label">Password:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="{{ Auth::user()->password }}" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Confirm password:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="{{ Auth::user()->password }}" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <input class="btn btn-primary" value="Save Changes" type="button">
+            <span></span>
+            <input class="btn btn-default" value="Cancel" type="reset">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+                        </div><!--/col-->
+                    </div><!--/row-->
+              </div><!--/panel-body-->
+          </div><!--/panel-->
 
-  </div><!-- /.content-wrapper -->
-
-	</div><!-- /.col -->
-
-	</div><!-- /.row -->
-
+    
+    
+    </div>
+  </div>
+</div>
+</div>        
+    </div>
+</div>
 @endsection

@@ -11,7 +11,7 @@
 
             
             <div class="panel panel-default">
-                <div class="panel-heading">Current Clients</div>
+                <div class="panel-heading">Client Tracker</div>
 
                 <div class="panel-body">
                     <table class="table">

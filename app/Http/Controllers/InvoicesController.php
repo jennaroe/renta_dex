@@ -19,4 +19,9 @@ class InvoicesController extends Controller
         return view('invoices')->with($data);
 
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

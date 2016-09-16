@@ -12,7 +12,7 @@ class User extends Authenticatable
     //  * @var array
      
     protected $fillable = [
-        'name', 'email', 'password', 'brokerName', 'brokerAddress'
+        'name', 'email', 'password', 'brokerName', 'brokerAddress','userImage'
     ];
 
     // *

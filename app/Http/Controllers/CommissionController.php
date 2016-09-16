@@ -89,4 +89,9 @@ class CommissionController extends Controller
         $commissions->delete();
         return redirect()->route('commissions.index')->with('message','Item has been deleted successfully');
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

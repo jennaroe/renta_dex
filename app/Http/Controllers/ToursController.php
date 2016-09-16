@@ -89,4 +89,9 @@ class ToursController extends Controller
         $tours->delete();
         return redirect()->route('tours.index')->with('message','Item has been deleted successfully');
     }
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }
