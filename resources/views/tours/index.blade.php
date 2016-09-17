@@ -27,10 +27,10 @@
                                 <td>
 
                                     {!! Form::open(array('route'=>['tours.destroy', $tour->id], 'method'=> 'DELETE')) !!}
-                                    {{ link_to_route('tours.edit','Edit',[$tour->id],['class'=>'btn btn-primary']) }}
+                                    {{ link_to_route('tours.edit','Edit',[$tour->id],['class'=>'btn btn-warning']) }}
                                     |
                                     
-                                        {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-danger']) !!}
+                                        {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-info']) !!}
                                     {!! Form::close() !!}
 
                                 </td>    
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            {{ link_to_route('tours.create','Add new tour',null,['class'=>'btn btn-success']) }}
+            {{ link_to_route('tours.create','Add new tour',null,['class'=>'btn bg-purple']) }}
 
         </div>
     </div>
