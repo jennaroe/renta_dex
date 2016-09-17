@@ -21,6 +21,8 @@ use App\Clients;
 
 use App\User;
 
+use App\Invoice;
+
 Route::get('/', function () {
     return view('home');
 });
@@ -32,6 +34,8 @@ Route::resource('task', 'TaskController');
 Route::resource('tours', 'ToursController');
 
 Route::resource('commissions', 'CommissionController');
+
+// Route::resource('invoices', 'InvoiceController');
 
 // Route::resource('acctInfo', 'AcctInfoController');
 

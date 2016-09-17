@@ -3,26 +3,15 @@
   @section('content')
 
     <div class='row'>
-     <div class='col-md-9'>
+     <div class='col-md-11'>
 
     <section class="content-header">
       <h1>
-        Invoice
-        <small>#007612</small>
+        Create an Invoice
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Invoice</li>
-      </ol>
+      <br>
+        <button type="button" class="btn btn-primary btn-warning" data-toggle="modal" data-target="#clientModal">Create New Invoice</button>
     </section>
-
-    <div class="pad margin no-print">
-      <div class="callout callout-info" style="margin-bottom: 0!important;">
-        <h4><i class="fa fa-info"></i> Note:</h4>
-        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
-      </div>
-    </div>
 
     <!-- Main content -->
     <section class="invoice">
@@ -147,17 +136,121 @@
       <!-- this row will not appear when printing -->
       <div class="row no-print">
         <div class="col-xs-12">
-          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-          <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
-          </button>
           <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
             <i class="fa fa-download"></i> Generate PDF
           </button>
+          <button type="button" class="btn bg-purple margin" data-dismiss="modal">Edit</button>
+  
         </div>
       </div>
     </section>
     <!-- /.content -->
 
+
+
+
+
+  <div class="modal fade" id="clientModal" role="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create New Invoice</h4>
+      </div>
+      <div class="modal-body">
+          <!-- /.box-header -->
+          <div class="box-body">
+            <form method = "post" action = "/client" role="form">
+              <!-- text input -->
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="clientName" value="" class="form-control" placeholder="Enter ...">
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" name="clientNum" value="" class="form-control" placeholder="Enter ...">
+              </div>
+               <div class="form-group">
+                <label>Move in Date</label>
+                <input type="text" name="moveInDate" value="" class="form-control" placeholder="Enter mm/dd/yy">
+              </div>
+
+                <!-- select num rooms -->
+              <div class="form-group">
+                <label># of Bedrooms</label>
+                <select name="numRooms" value="" class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+
+                   <!-- select num rooms -->
+              <div class="form-group">
+                <label># of Bathrooms</label>
+                <select name="numBaths" value="" class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+
+                   <!-- have pets? -->
+              <div class="form-group">
+                <label>Pets?</label>
+                <select name="Pets" value="" class="form-control">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+                   <!-- select num pets -->
+              <div class="form-group">
+                <label># of Pets</label>
+                <select name="numPets" value="" class="form-control">
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4 (Not suggested)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Pet Type</label>
+                <input type="text" name="petType" value="" class="form-control" placeholder="Enter ...">
+              </div>
+
+              <div class="form-group">
+                <label>Client Status</label>
+                <select name="activeClient" value="" class="form-control">
+                  <option>Tours Scheduled</option>
+                  <option>Lease Signed</option>
+                  <option>Emails Exchanged</option>
+                  <option>Phone Calls Exchanged</option>
+                  <option>No More Responses</option>
+                </select>
+              </div>
+
+               <!-- Notes -->
+              <div class="form-group">
+                <label>Notes</label>
+                <textarea name="Notes" value="" class="form-control" rows="5" placeholder="Enter ..."></textarea>
+              </div>
+              <input type="submit" class="btn bg-purple margin">
+
+            </form>      
+         </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <input type="submit" class="btn bg-purple margin">
+        <!-- <button type="button" class="btn btn-primary">Save Client</button> -->
+      </div>
+    </div>
+  </div>
+</div>
      
 
 	</div><!-- /.col -->

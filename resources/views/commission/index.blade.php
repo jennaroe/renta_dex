@@ -37,10 +37,10 @@
                                 <td>
 
                                     {!! Form::open(array('route'=>['commissions.destroy', $commission->id], 'method'=> 'DELETE')) !!}
-                                    {{ link_to_route('commissions.edit','Edit',[$commission->id],['class'=>'btn btn-primary']) }}
+                                    {{ link_to_route('commissions.edit','Edit',[$commission->id],['class'=>'btn btn-warning']) }}
                                     |
                                     
-                                    {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-danger']) !!}
+                                    {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-info']) !!}
                                     {!! Form::close() !!}
 
                                 </td>    
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            {{ link_to_route('commissions.create','Add New Signed Lease',null,['class'=>'btn btn-success']) }}
+            {{ link_to_route('commissions.create','Add New Signed Lease',null,['class'=>'btn bg-purple']) }}
 
         </div>
     </div>

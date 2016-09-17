@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('brokerName');
             $table->string('brokerAddress');
+
             $table->rememberToken();
             $table->timestamps();
         });

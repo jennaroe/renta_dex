@@ -41,10 +41,10 @@
                                 <td>
 
                                     {!! Form::open(array('route'=>['clients.destroy', $client->id], 'method'=> 'DELETE')) !!}
-                                    {{ link_to_route('clients.edit','Edit',[$client->id],['class'=>'btn btn-primary']) }}
+                                    {{ link_to_route('clients.edit','Edit',[$client->id],['class'=>'btn btn-warning']) }}
                                     |
                                     
-                                    {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-danger']) !!}
+                                    {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-info']) !!}
                                     {!! Form::close() !!}
 
                                 </td>    
@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            {{ link_to_route('clients.create','Add new Client',null,['class'=>'btn btn-success']) }}
+            {{ link_to_route('clients.create','Add new Client',null,['class'=>'btn bg-purple']) }}
 
         </div>
     </div>
