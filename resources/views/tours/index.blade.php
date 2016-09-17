@@ -30,7 +30,7 @@
                                     {{ link_to_route('tours.edit','Edit',[$tour->id],['class'=>'btn btn-warning']) }}
                                     |
                                     
-                                        {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-info']) !!}
+                                        {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-default']) !!}
                                     {!! Form::close() !!}
 
                                 </td>    

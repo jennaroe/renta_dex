@@ -40,7 +40,7 @@
                                     {{ link_to_route('commissions.edit','Edit',[$commission->id],['class'=>'btn btn-warning']) }}
                                     |
                                     
-                                    {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-info']) !!}
+                                    {!! Form::button('Delete',['type' =>'submit', 'class'=>'btn btn-default']) !!}
                                     {!! Form::close() !!}
 
                                 </td>    
