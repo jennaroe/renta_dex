@@ -46,7 +46,7 @@
             <li><a href="/commissions"><span>Commission Tracker</span></a></li>
             <li><a href="/tours"><span>Tours</span></a></li>
             <li><a href="/invoices"><span>Invoices</span></a></li>
-            <li><a href="/buildings"><span>Buildings</span></a></li>
+            <!-- <li><a href="/buildings"><span>Buildings</span></a></li> -->
             <li><a href="/acctInfo"><span>Profile</span></a></li>
 
             </li>
