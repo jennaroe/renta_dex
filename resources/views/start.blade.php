@@ -3,7 +3,7 @@
 @section('content')
 <style type="text/css">
 	.jumbotron {
-	background-image: url("../bower_components/AdminLTE/dist/img/featured.jpg");
+	background-image: url("../bower_components/AdminLTE/dist/img/Featured.jpg");
 	background-size: cover;
 	margin-bottom: 1%;
 
