@@ -3,26 +3,15 @@
   @section('content')
 
     <div class='row'>
-     <div class='col-md-9'>
+     <div class='col-md-11'>
 
     <section class="content-header">
       <h1>
-        Invoice
-        <small>#007612</small>
+        Create an Invoice
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Invoice</li>
-      </ol>
+      <br>
+        <button type="button" class="btn btn-primary btn-warning" data-toggle="modal" data-target="#clientModal">Create New Invoice</button>
     </section>
-
-    <div class="pad margin no-print">
-      <div class="callout callout-info" style="margin-bottom: 0!important;">
-        <h4><i class="fa fa-info"></i> Note:</h4>
-        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
-      </div>
-    </div>
 
     <!-- Main content -->
     <section class="invoice">
@@ -111,8 +100,8 @@
 
 
           <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg
-            dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+            All payments are to be submitted to the Broker. Please see broker name and address above. Please make sure the include rep name when submitting payment. 
+
           </p>
         </div>
         <!-- /.col -->
@@ -123,19 +112,17 @@
             <table class="table">
               <tr>
                 <th style="width:50%">Subtotal:</th>
-                <td>$250.30</td>
+                <td>$1650</td>
               </tr>
               <tr>
-                <th>Tax (9.3%)</th>
-                <td>$10.34</td>
+               
               </tr>
               <tr>
-                <th>Shipping:</th>
-                <td>$5.80</td>
+                
               </tr>
               <tr>
                 <th>Total:</th>
-                <td>$265.24</td>
+                <td>$1650</td>
               </tr>
             </table>
           </div>
@@ -147,21 +134,80 @@
       <!-- this row will not appear when printing -->
       <div class="row no-print">
         <div class="col-xs-12">
-          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-          <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
-          </button>
           <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
             <i class="fa fa-download"></i> Generate PDF
           </button>
+          <button type="button" class="btn bg-purple margin" data-dismiss="modal">Edit</button>
+  
         </div>
       </div>
     </section>
     <!-- /.content -->
 
+
+
+  <div class="modal fade" id="clientModal" role="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create New Invoice</h4>
+      </div>
+      <div class="modal-body">
+          <!-- /.box-header -->
+          <div class="box-body">
+            <form method = "post" action = "/client" role="form">
+              <!-- text input -->
+              <div class="form-group">
+                <label>Date</label>
+                <input type="text" name="date" value="" class="form-control" placeholder="Enter ...">
+              </div>
+              <div class="form-group">
+                <label>Building Name</label>
+                <input type="text" name="buildingName" value="" class="form-control" placeholder="Enter ...">
+              </div>
+               <div class="form-group">
+                <label>Building Address</label>
+                <input type="text" name="buildingAddress" value="" class="form-control" placeholder="Enter ...">
+              </div>
+               <div class="form-group">
+                <label>Rep Name</label>
+                <input type="text" name="repName" value="" class="form-control" placeholder="Enter ...">
+              </div>
+               <div class="form-group">
+                <label>Tenant Name</label>
+                <input type="text" name="tenantName" value="" class="form-control" placeholder="Enter ...">
+              </div>
+               <div class="form-group">
+                <label>Unit #</label>
+                <input type="text" name="unitNum" value="" class="form-control" placeholder="Enter ...">
+              </div>
+               <div class="form-group">
+                <label>Move in Date</label>
+                <input type="text" name="moveInDate" value="" class="form-control" placeholder="Enter mm/dd/yy">
+              </div>
+
+              <div class="form-group">
+                <label>Total Due</label>
+                <input type="text" name="totalDue" value="" class="form-control" placeholder="Enter ...">
+              </div>           
+
+            </form>      
+         </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn bg-purple" data-dismiss="modal">Save</button>
+<!--         <input type="submit" class="btn bg-purple margin">
+ -->        <!-- <button type="button" class="btn btn-primary">Save Client</button> -->
+      </div>
+    </div>
+  </div>
+</div>
      
 
-	</div><!-- /.col -->
+  </div><!-- /.col -->
 
-	</div><!-- /.row -->
+  </div><!-- /.row -->
 
 @endsection
+

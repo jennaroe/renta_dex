@@ -17,18 +17,14 @@
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
-        <img src="https://cumuloquoise.files.wordpress.com/2014/06/peter-parker2.gif" class="avatar img-circle img-thumbnail" alt="avatar">
+        <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13612160_1163812440344398_7433150807896174092_n.jpg?oh=221bfe68bc481a49e1535b2903757b5e&oe=5874D5AE" class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
         <input type="file" class="text-center center-block well well-sm">
       </div>
     </div>
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-      <div class="alert alert-info alert-dismissable">
-        <a class="panel-close close" data-dismiss="alert">×</a> 
-        <i class="fa fa-coffee"></i>
-        This is an <strong>.alert</strong>. Use this to show important messages to the user.
-      </div>
+      
       <h3>Personal info</h3>
       <form class="form-horizontal" role="form">
         <div class="form-group">
@@ -70,9 +66,9 @@
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input class="btn btn-primary" value="Save Changes" type="button">
+            <input class="btn btn-warning" value="Save Changes" type="button">
             <span></span>
-            <input class="btn btn-default" value="Cancel" type="reset">
+            <input class="btn bg-purple" value="Cancel" type="reset">
           </div>
         </div>
       </form>
@@ -83,13 +79,10 @@
                     </div><!--/row-->
               </div><!--/panel-body-->
           </div><!--/panel-->
-
-    
-    
+        </div>
+      </div>
     </div>
-  </div>
+  </div>        
 </div>
-</div>        
-    </div>
 </div>
 @endsection

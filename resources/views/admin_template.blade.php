@@ -17,6 +17,7 @@
         <link href="{{ asset("/bower_components/AdminLTE/dist/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
         
         <link href="{{ asset("/bower_components/AdminLTE/dist/css/skins/skin-purple.min.css")}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset("/bower_components/AdminLTE/plugins/fullcalendar/dist/fullcalendar.min.css")}}" rel="stylesheet" type="text/css" />
 
         <!-- jQuery 2.2.3 -->
         <script src="{{ asset ("/bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js") }}"></script>
@@ -69,11 +70,10 @@
     <script src="{{ asset("/bower_components/AdminLTE/dist/js/demo.js") }}"></script>
     <!-- FastClick -->
     <script src="{{ asset("/bower_components/AdminLTE/plugins/fastclick/fastclick.js") }}"></script>
-    
     <!-- fullCalendar 2.2.5 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <script src="{{ asset("/bower_components/AdminLTE/plugins/moment/moment.js") }}"></script>
 
-    <script src="{{ asset("/bower_components/AdminLTE/plugins/fullcalendar/fullcalendar.min.js") }}"></script>
+    <script src="{{ asset("/bower_components/AdminLTE/plugins/fullcalendar/dist/fullcalendar.min.js") }}"></script>
 
 </body>
 </html>
